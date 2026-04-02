@@ -1,0 +1,28 @@
+# 🎭 Playwright QA Automation Hub
+
+---
+
+## 🎯 Objectifs du Projet
+Ce projet n'est pas qu'une suite de scripts. C'est une démonstration de la **Pyramide des Tests** appliquée à un environnement startup :
+* **Fiabilité :** Utilisation de Playwright pour des tests E2E robustes (auto-waiting).
+* **Vitesse :** Intégration continue (CI/CD) via GitHub Actions.
+* **Maintenabilité :** Architecture basée sur le **Page Object Model (POM)**.
+* **Observabilité :** Rapports de tests détaillés avec artefacts (traces, vidéos).
+
+## 🛠 Stack Technique
+* **Framework :** [Playwright](https://playwright.dev/) (Chromium, Firefox, WebKit)
+* **Langage :** JavaScript / Node.js
+* **CI/CD :** GitHub Actions
+* **Conteneurisation :** Docker (pour l'isolation des environnements)
+* **API Testing :** Playwright Request API & Postman
+
+## 🏗 Architecture des Tests
+```text
+.
+├── .github/workflows/     # Configuration CI/CD (YAML)
+├── tests/                 # Scripts de tests fonctionnels
+│   ├── e2e/               # Scénarios de bout en bout
+│   └── api/               # Tests de validation des endpoints
+├── pages/                 # Page Object Models (Abstractions UI)
+├── playwright.config.js   # Configuration globale
+└── package.json           # Dépendances et scripts
