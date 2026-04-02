@@ -3,7 +3,10 @@ import path from 'path';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('https://automationexercise.com/contact_us');
-  await page.getByRole('button', { name: 'Consent' }).click();
+  const consent = page.getByRole('button', { name: 'Consent' });
+  if (await consent.isVisible()) {
+    await consent.click();
+  }
 });
 
 test('Upload a file', async ({ page }) => {
